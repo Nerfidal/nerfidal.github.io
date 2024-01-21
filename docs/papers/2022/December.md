@@ -1,0 +1,1308 @@
+---
+layout: default
+title: December
+parent: 2022
+nav_order: 12
+---
+<!---metadata--->
+
+## NeRF-Gaze: A Head-Eye Redirection Parametric Model for Gaze Estimation
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-30 | Pengwei Yin, Jiawu Dai, Jingjing Wang, Di Xie, Shiliang Pu | cs.CV | [PDF](http://arxiv.org/pdf/2212.14710v1){: .btn .btn-green } |
+
+**Abstract**: Gaze estimation is the fundamental basis for many visual tasks. Yet, the high
+cost of acquiring gaze datasets with 3D annotations hinders the optimization
+and application of gaze estimation models. In this work, we propose a novel
+Head-Eye redirection parametric model based on Neural Radiance Field, which
+allows dense gaze data generation with view consistency and accurate gaze
+direction. Moreover, our head-eye redirection parametric model can decouple the
+face and eyes for separate neural rendering, so it can achieve the purpose of
+separately controlling the attributes of the face, identity, illumination, and
+eye gaze direction. Thus diverse 3D-aware gaze datasets could be obtained by
+manipulating the latent code belonging to different face attributions in an
+unsupervised manner. Extensive experiments on several benchmarks demonstrate
+the effectiveness of our method in domain generalization and domain adaptation
+for gaze estimation tasks.
+
+Comments:
+- 10 pages, 8 figures, submitted to CVPR 2023
+
+---
+
+## Dream3D: Zero-Shot Text-to-3D Synthesis Using 3D Shape Prior and  Text-to-Image Diffusion Models
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-28 | Jiale Xu, Xintao Wang, Weihao Cheng, Yan-Pei Cao, Ying Shan, Xiaohu Qie, Shenghua Gao | cs.CV | [PDF](http://arxiv.org/pdf/2212.14704v2){: .btn .btn-green } |
+
+**Abstract**: Recent CLIP-guided 3D optimization methods, such as DreamFields and
+PureCLIPNeRF, have achieved impressive results in zero-shot text-to-3D
+synthesis. However, due to scratch training and random initialization without
+prior knowledge, these methods often fail to generate accurate and faithful 3D
+structures that conform to the input text. In this paper, we make the first
+attempt to introduce explicit 3D shape priors into the CLIP-guided 3D
+optimization process. Specifically, we first generate a high-quality 3D shape
+from the input text in the text-to-shape stage as a 3D shape prior. We then use
+it as the initialization of a neural radiance field and optimize it with the
+full prompt. To address the challenging text-to-shape generation task, we
+present a simple yet effective approach that directly bridges the text and
+image modalities with a powerful text-to-image diffusion model. To narrow the
+style domain gap between the images synthesized by the text-to-image diffusion
+model and shape renderings used to train the image-to-shape generator, we
+further propose to jointly optimize a learnable text prompt and fine-tune the
+text-to-image diffusion model for rendering-style image generation. Our method,
+Dream3D, is capable of generating imaginative 3D content with superior visual
+quality and shape accuracy compared to state-of-the-art methods.
+
+Comments:
+- Accepted by CVPR 2023. Project page:
+  https://bluestyle97.github.io/dream3d/
+
+---
+
+## MonoNeRF: Learning a Generalizable Dynamic Radiance Field from Monocular  Videos
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-26 | Fengrui Tian, Shaoyi Du, Yueqi Duan | cs.CV | [PDF](http://arxiv.org/pdf/2212.13056v3){: .btn .btn-green } |
+
+**Abstract**: In this paper, we target at the problem of learning a generalizable dynamic
+radiance field from monocular videos. Different from most existing NeRF methods
+that are based on multiple views, monocular videos only contain one view at
+each timestamp, thereby suffering from ambiguity along the view direction in
+estimating point features and scene flows. Previous studies such as DynNeRF
+disambiguate point features by positional encoding, which is not transferable
+and severely limits the generalization ability. As a result, these methods have
+to train one independent model for each scene and suffer from heavy
+computational costs when applying to increasing monocular videos in real-world
+applications. To address this, We propose MonoNeRF to simultaneously learn
+point features and scene flows with point trajectory and feature correspondence
+constraints across frames. More specifically, we learn an implicit velocity
+field to estimate point trajectory from temporal features with Neural ODE,
+which is followed by a flow-based feature aggregation module to obtain spatial
+features along the point trajectory. We jointly optimize temporal and spatial
+features in an end-to-end manner. Experiments show that our MonoNeRF is able to
+learn from multiple scenes and support new applications such as scene editing,
+unseen frame synthesis, and fast novel scene adaptation. Codes are available at
+https://github.com/tianfr/MonoNeRF.
+
+Comments:
+- Accepted by ICCV 2023
+
+---
+
+## PaletteNeRF: Palette-based Color Editing for NeRFs
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-25 | Qiling Wu, Jianchao Tan, Kun Xu | cs.CV | [PDF](http://arxiv.org/pdf/2212.12871v1){: .btn .btn-green } |
+
+**Abstract**: Neural Radiance Field (NeRF) is a powerful tool to faithfully generate novel
+views for scenes with only sparse captured images. Despite its strong
+capability for representing 3D scenes and their appearance, its editing ability
+is very limited. In this paper, we propose a simple but effective extension of
+vanilla NeRF, named PaletteNeRF, to enable efficient color editing on
+NeRF-represented scenes. Motivated by recent palette-based image decomposition
+works, we approximate each pixel color as a sum of palette colors modulated by
+additive weights. Instead of predicting pixel colors as in vanilla NeRFs, our
+method predicts additive weights. The underlying NeRF backbone could also be
+replaced with more recent NeRF models such as KiloNeRF to achieve real-time
+editing. Experimental results demonstrate that our method achieves efficient,
+view-consistent, and artifact-free color editing on a wide range of
+NeRF-represented scenes.
+
+Comments:
+- 12 pages, 10 figures
+
+---
+
+## Removing Objects From Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-22 | Silvan Weder, Guillermo Garcia-Hernando, Aron Monszpart, Marc Pollefeys, Gabriel Brostow, Michael Firman, Sara Vicente | cs.CV | [PDF](http://arxiv.org/pdf/2212.11966v1){: .btn .btn-green } |
+
+**Abstract**: Neural Radiance Fields (NeRFs) are emerging as a ubiquitous scene
+representation that allows for novel view synthesis. Increasingly, NeRFs will
+be shareable with other people. Before sharing a NeRF, though, it might be
+desirable to remove personal information or unsightly objects. Such removal is
+not easily achieved with the current NeRF editing frameworks. We propose a
+framework to remove objects from a NeRF representation created from an RGB-D
+sequence. Our NeRF inpainting method leverages recent work in 2D image
+inpainting and is guided by a user-provided mask. Our algorithm is underpinned
+by a confidence based view selection procedure. It chooses which of the
+individual 2D inpainted images to use in the creation of the NeRF, so that the
+resulting inpainted NeRF is 3D consistent. We show that our method for NeRF
+editing is effective for synthesizing plausible inpaintings in a multi-view
+coherent manner. We validate our approach using a new and still-challenging
+dataset for the task of NeRF inpainting.
+
+---
+
+## Incremental Neural Implicit Representation with Uncertainty-Filtered  Knowledge Distillation
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-21 | Mengqi Guo, Chen Li, Hanlin Chen, Gim Hee Lee | cs.CV | [PDF](http://arxiv.org/pdf/2212.10950v2){: .btn .btn-green } |
+
+**Abstract**: Recent neural implicit representations (NIRs) have achieved great success in
+the tasks of 3D reconstruction and novel view synthesis. However, they suffer
+from the catastrophic forgetting problem when continuously learning from
+streaming data without revisiting the previously seen data. This limitation
+prohibits the application of existing NIRs to scenarios where images come in
+sequentially. In view of this, we explore the task of incremental learning for
+NIRs in this work. We design a student-teacher framework to mitigate the
+catastrophic forgetting problem. Specifically, we iterate the process of using
+the student as the teacher at the end of each time step and let the teacher
+guide the training of the student in the next step. As a result, the student
+network is able to learn new information from the streaming data and retain old
+knowledge from the teacher network simultaneously. Although intuitive, naively
+applying the student-teacher pipeline does not work well in our task. Not all
+information from the teacher network is helpful since it is only trained with
+the old data. To alleviate this problem, we further introduce a random inquirer
+and an uncertainty-based filter to filter useful information. Our proposed
+method is general and thus can be adapted to different implicit representations
+such as neural radiance field (NeRF) and neural SDF. Extensive experimental
+results for both 3D reconstruction and novel view synthesis demonstrate the
+effectiveness of our approach compared to different baselines.
+
+---
+
+## PaletteNeRF: Palette-based Appearance Editing of Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-21 | Zhengfei Kuang, Fujun Luan, Sai Bi, Zhixin Shu, Gordon Wetzstein, Kalyan Sunkavalli | cs.CV | [PDF](http://arxiv.org/pdf/2212.10699v2){: .btn .btn-green } |
+
+**Abstract**: Recent advances in neural radiance fields have enabled the high-fidelity 3D
+reconstruction of complex scenes for novel view synthesis. However, it remains
+underexplored how the appearance of such representations can be efficiently
+edited while maintaining photorealism.
+  In this work, we present PaletteNeRF, a novel method for photorealistic
+appearance editing of neural radiance fields (NeRF) based on 3D color
+decomposition. Our method decomposes the appearance of each 3D point into a
+linear combination of palette-based bases (i.e., 3D segmentations defined by a
+group of NeRF-type functions) that are shared across the scene. While our
+palette-based bases are view-independent, we also predict a view-dependent
+function to capture the color residual (e.g., specular shading). During
+training, we jointly optimize the basis functions and the color palettes, and
+we also introduce novel regularizers to encourage the spatial coherence of the
+decomposition.
+  Our method allows users to efficiently edit the appearance of the 3D scene by
+modifying the color palettes. We also extend our framework with compressed
+semantic features for semantic-aware appearance editing. We demonstrate that
+our technique is superior to baseline methods both quantitatively and
+qualitatively for appearance editing of complex real-world scenes.
+
+---
+
+## Correspondence Distillation from NeRF-based GAN
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-19 | Yushi Lan, Chen Change Loy, Bo Dai | cs.CV | [PDF](http://arxiv.org/pdf/2212.09735v2){: .btn .btn-green } |
+
+**Abstract**: The neural radiance field (NeRF) has shown promising results in preserving
+the fine details of objects and scenes. However, unlike mesh-based
+representations, it remains an open problem to build dense correspondences
+across different NeRFs of the same category, which is essential in many
+downstream tasks. The main difficulties of this problem lie in the implicit
+nature of NeRF and the lack of ground-truth correspondence annotations. In this
+paper, we show it is possible to bypass these challenges by leveraging the rich
+semantics and structural priors encapsulated in a pre-trained NeRF-based GAN.
+Specifically, we exploit such priors from three aspects, namely 1) a dual
+deformation field that takes latent codes as global structural indicators, 2) a
+learning objective that regards generator features as geometric-aware local
+descriptors, and 3) a source of infinite object-specific NeRF samples. Our
+experiments demonstrate that such priors lead to 3D dense correspondence that
+is accurate, smooth, and robust. We also show that established dense
+correspondence across NeRFs can effectively enable many NeRF-based downstream
+applications such as texture transfer.
+
+Comments:
+- Project page: https://nirvanalan.github.io/projects/DDF/index.html
+
+---
+
+## StyleTRF: Stylizing Tensorial Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-19 | Rahul Goel, Sirikonda Dhawal, Saurabh Saini, P. J. Narayanan | cs.CV | [PDF](http://arxiv.org/pdf/2212.09330v1){: .btn .btn-green } |
+
+**Abstract**: Stylized view generation of scenes captured casually using a camera has
+received much attention recently. The geometry and appearance of the scene are
+typically captured as neural point sets or neural radiance fields in the
+previous work. An image stylization method is used to stylize the captured
+appearance by training its network jointly or iteratively with the structure
+capture network. The state-of-the-art SNeRF method trains the NeRF and
+stylization network in an alternating manner. These methods have high training
+time and require joint optimization. In this work, we present StyleTRF, a
+compact, quick-to-optimize strategy for stylized view generation using TensoRF.
+The appearance part is fine-tuned using sparse stylized priors of a few views
+rendered using the TensoRF representation for a few iterations. Our method thus
+effectively decouples style-adaption from view capture and is much faster than
+the previous methods. We show state-of-the-art results on several scenes used
+for this purpose.
+
+Comments:
+- Accepted at ICVGIP-2022
+
+---
+
+## SPARF: Large-Scale Learning of 3D Sparse Radiance Fields from Few Input  Images
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-18 | Abdullah Hamdi, Bernard Ghanem, Matthias Nießner | cs.CV | [PDF](http://arxiv.org/pdf/2212.09100v3){: .btn .btn-green } |
+
+**Abstract**: Recent advances in Neural Radiance Fields (NeRFs) treat the problem of novel
+view synthesis as Sparse Radiance Field (SRF) optimization using sparse voxels
+for efficient and fast rendering (plenoxels,InstantNGP). In order to leverage
+machine learning and adoption of SRFs as a 3D representation, we present SPARF,
+a large-scale ShapeNet-based synthetic dataset for novel view synthesis
+consisting of $\sim$ 17 million images rendered from nearly 40,000 shapes at
+high resolution (400 X 400 pixels). The dataset is orders of magnitude larger
+than existing synthetic datasets for novel view synthesis and includes more
+than one million 3D-optimized radiance fields with multiple voxel resolutions.
+Furthermore, we propose a novel pipeline (SuRFNet) that learns to generate
+sparse voxel radiance fields from only few views. This is done by using the
+densely collected SPARF dataset and 3D sparse convolutions. SuRFNet employs
+partial SRFs from few/one images and a specialized SRF loss to learn to
+generate high-quality sparse voxel radiance fields that can be rendered from
+novel views. Our approach achieves state-of-the-art results in the task of
+unconstrained novel view synthesis based on few views on ShapeNet as compared
+to recent baselines. The SPARF dataset is made public with the code and models
+on the project website https://abdullahamdi.com/sparf/ .
+
+Comments:
+- published at ICCV 2023 workshop proceedings
+
+---
+
+## Masked Wavelet Representation for Compact Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-18 | Daniel Rho, Byeonghyeon Lee, Seungtae Nam, Joo Chan Lee, Jong Hwan Ko, Eunbyung Park | cs.CV | [PDF](http://arxiv.org/pdf/2212.09069v2){: .btn .btn-green } |
+
+**Abstract**: Neural radiance fields (NeRF) have demonstrated the potential of
+coordinate-based neural representation (neural fields or implicit neural
+representation) in neural rendering. However, using a multi-layer perceptron
+(MLP) to represent a 3D scene or object requires enormous computational
+resources and time. There have been recent studies on how to reduce these
+computational inefficiencies by using additional data structures, such as grids
+or trees. Despite the promising performance, the explicit data structure
+necessitates a substantial amount of memory. In this work, we present a method
+to reduce the size without compromising the advantages of having additional
+data structures. In detail, we propose using the wavelet transform on
+grid-based neural fields. Grid-based neural fields are for fast convergence,
+and the wavelet transform, whose efficiency has been demonstrated in
+high-performance standard codecs, is to improve the parameter efficiency of
+grids. Furthermore, in order to achieve a higher sparsity of grid coefficients
+while maintaining reconstruction quality, we present a novel trainable masking
+approach. Experimental results demonstrate that non-spatial grid coefficients,
+such as wavelet coefficients, are capable of attaining a higher level of
+sparsity than spatial grid coefficients, resulting in a more compact
+representation. With our proposed mask and compression pipeline, we achieved
+state-of-the-art performance within a memory budget of 2 MB. Our code is
+available at https://github.com/daniel03c1/masked_wavelet_nerf.
+
+Comments:
+- Accepted to CVPR 2023
+
+---
+
+## MEIL-NeRF: Memory-Efficient Incremental Learning of Neural Radiance  Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-16 | Jaeyoung Chung, Kanggeon Lee, Sungyong Baik, Kyoung Mu Lee | cs.CV | [PDF](http://arxiv.org/pdf/2212.08328v2){: .btn .btn-green } |
+
+**Abstract**: Hinged on the representation power of neural networks, neural radiance fields
+(NeRF) have recently emerged as one of the promising and widely applicable
+methods for 3D object and scene representation. However, NeRF faces challenges
+in practical applications, such as large-scale scenes and edge devices with a
+limited amount of memory, where data needs to be processed sequentially. Under
+such incremental learning scenarios, neural networks are known to suffer
+catastrophic forgetting: easily forgetting previously seen data after training
+with new data. We observe that previous incremental learning algorithms are
+limited by either low performance or memory scalability issues. As such, we
+develop a Memory-Efficient Incremental Learning algorithm for NeRF (MEIL-NeRF).
+MEIL-NeRF takes inspiration from NeRF itself in that a neural network can serve
+as a memory that provides the pixel RGB values, given rays as queries. Upon the
+motivation, our framework learns which rays to query NeRF to extract previous
+pixel values. The extracted pixel values are then used to train NeRF in a
+self-distillation manner to prevent catastrophic forgetting. As a result,
+MEIL-NeRF demonstrates constant memory consumption and competitive performance.
+
+Comments:
+- 18 pages. For the project page, see
+  https://robot0321.github.io/meil-nerf/index.html
+
+---
+
+## SteerNeRF: Accelerating NeRF Rendering via Smooth Viewpoint Trajectory
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-15 | Sicheng Li, Hao Li, Yue Wang, Yiyi Liao, Lu Yu | cs.CV | [PDF](http://arxiv.org/pdf/2212.08476v1){: .btn .btn-green } |
+
+**Abstract**: Neural Radiance Fields (NeRF) have demonstrated superior novel view synthesis
+performance but are slow at rendering. To speed up the volume rendering
+process, many acceleration methods have been proposed at the cost of large
+memory consumption. To push the frontier of the efficiency-memory trade-off, we
+explore a new perspective to accelerate NeRF rendering, leveraging a key fact
+that the viewpoint change is usually smooth and continuous in interactive
+viewpoint control. This allows us to leverage the information of preceding
+viewpoints to reduce the number of rendered pixels as well as the number of
+sampled points along the ray of the remaining pixels. In our pipeline, a
+low-resolution feature map is rendered first by volume rendering, then a
+lightweight 2D neural renderer is applied to generate the output image at
+target resolution leveraging the features of preceding and current frames. We
+show that the proposed method can achieve competitive rendering quality while
+reducing the rendering time with little memory overhead, enabling 30FPS at
+1080P image resolution with a low memory footprint.
+
+---
+
+## Real-Time Neural Light Field on Mobile Devices
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-15 | Junli Cao, Huan Wang, Pavlo Chemerys, Vladislav Shakhrai, Ju Hu, Yun Fu, Denys Makoviichuk, Sergey Tulyakov, Jian Ren | cs.CV | [PDF](http://arxiv.org/pdf/2212.08057v2){: .btn .btn-green } |
+
+**Abstract**: Recent efforts in Neural Rendering Fields (NeRF) have shown impressive
+results on novel view synthesis by utilizing implicit neural representation to
+represent 3D scenes. Due to the process of volumetric rendering, the inference
+speed for NeRF is extremely slow, limiting the application scenarios of
+utilizing NeRF on resource-constrained hardware, such as mobile devices. Many
+works have been conducted to reduce the latency of running NeRF models.
+However, most of them still require high-end GPU for acceleration or extra
+storage memory, which is all unavailable on mobile devices. Another emerging
+direction utilizes the neural light field (NeLF) for speedup, as only one
+forward pass is performed on a ray to predict the pixel color. Nevertheless, to
+reach a similar rendering quality as NeRF, the network in NeLF is designed with
+intensive computation, which is not mobile-friendly. In this work, we propose
+an efficient network that runs in real-time on mobile devices for neural
+rendering. We follow the setting of NeLF to train our network. Unlike existing
+works, we introduce a novel network architecture that runs efficiently on
+mobile devices with low latency and small size, i.e., saving $15\times \sim
+24\times$ storage compared with MobileNeRF. Our model achieves high-resolution
+generation while maintaining real-time inference for both synthetic and
+real-world scenes on mobile devices, e.g., $18.04$ms (iPhone 13) for rendering
+one $1008\times756$ image of real 3D scenes. Additionally, we achieve similar
+image quality as NeRF and better quality than MobileNeRF (PSNR $26.15$ vs.
+$25.91$ on the real-world forward-facing dataset).
+
+Comments:
+- CVPR 2023. Project page: https://snap-research.github.io/MobileR2L/
+  Code: https://github.com/snap-research/MobileR2L/
+
+---
+
+## VolRecon: Volume Rendering of Signed Ray Distance Functions for  Generalizable Multi-View Reconstruction
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-15 | Yufan Ren, Fangjinhua Wang, Tong Zhang, Marc Pollefeys, Sabine Süsstrunk | cs.CV | [PDF](http://arxiv.org/pdf/2212.08067v2){: .btn .btn-green } |
+
+**Abstract**: The success of the Neural Radiance Fields (NeRF) in novel view synthesis has
+inspired researchers to propose neural implicit scene reconstruction. However,
+most existing neural implicit reconstruction methods optimize per-scene
+parameters and therefore lack generalizability to new scenes. We introduce
+VolRecon, a novel generalizable implicit reconstruction method with Signed Ray
+Distance Function (SRDF). To reconstruct the scene with fine details and little
+noise, VolRecon combines projection features aggregated from multi-view
+features, and volume features interpolated from a coarse global feature volume.
+Using a ray transformer, we compute SRDF values of sampled points on a ray and
+then render color and depth. On DTU dataset, VolRecon outperforms SparseNeuS by
+about 30% in sparse view reconstruction and achieves comparable accuracy as
+MVSNet in full view reconstruction. Furthermore, our approach exhibits good
+generalization performance on the large-scale ETH3D benchmark.
+
+---
+
+## NeRF-Art: Text-Driven Neural Radiance Fields Stylization
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-15 | Can Wang, Ruixiang Jiang, Menglei Chai, Mingming He, Dongdong Chen, Jing Liao | cs.CV | [PDF](http://arxiv.org/pdf/2212.08070v1){: .btn .btn-green } |
+
+**Abstract**: As a powerful representation of 3D scenes, the neural radiance field (NeRF)
+enables high-quality novel view synthesis from multi-view images. Stylizing
+NeRF, however, remains challenging, especially on simulating a text-guided
+style with both the appearance and the geometry altered simultaneously. In this
+paper, we present NeRF-Art, a text-guided NeRF stylization approach that
+manipulates the style of a pre-trained NeRF model with a simple text prompt.
+Unlike previous approaches that either lack sufficient geometry deformations
+and texture details or require meshes to guide the stylization, our method can
+shift a 3D scene to the target style characterized by desired geometry and
+appearance variations without any mesh guidance. This is achieved by
+introducing a novel global-local contrastive learning strategy, combined with
+the directional constraint to simultaneously control both the trajectory and
+the strength of the target style. Moreover, we adopt a weight regularization
+method to effectively suppress cloudy artifacts and geometry noises which arise
+easily when the density field is transformed during geometry stylization.
+Through extensive experiments on various styles, we demonstrate that our method
+is effective and robust regarding both single-view stylization quality and
+cross-view consistency. The code and more results can be found in our project
+page: https://cassiepython.github.io/nerfart/.
+
+Comments:
+- Project page: https://cassiepython.github.io/nerfart/
+
+---
+
+## NoPe-NeRF: Optimising Neural Radiance Field with No Pose Prior
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-14 | Wenjing Bian, Zirui Wang, Kejie Li, Jia-Wang Bian, Victor Adrian Prisacariu | cs.CV | [PDF](http://arxiv.org/pdf/2212.07388v3){: .btn .btn-green } |
+
+**Abstract**: Training a Neural Radiance Field (NeRF) without pre-computed camera poses is
+challenging. Recent advances in this direction demonstrate the possibility of
+jointly optimising a NeRF and camera poses in forward-facing scenes. However,
+these methods still face difficulties during dramatic camera movement. We
+tackle this challenging problem by incorporating undistorted monocular depth
+priors. These priors are generated by correcting scale and shift parameters
+during training, with which we are then able to constrain the relative poses
+between consecutive frames. This constraint is achieved using our proposed
+novel loss functions. Experiments on real-world indoor and outdoor scenes show
+that our method can handle challenging camera trajectories and outperforms
+existing methods in terms of novel view rendering quality and pose estimation
+accuracy. Our project page is https://nope-nerf.active.vision.
+
+---
+
+## Rodin: A Generative Model for Sculpting 3D Digital Avatars Using  Diffusion
+
+
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-12 | Tengfei Wang, Bo Zhang, Ting Zhang, Shuyang Gu, Jianmin Bao, Tadas Baltrusaitis, Jingjing Shen, Dong Chen, Fang Wen, Qifeng Chen, Baining Guo | cs.CV | [PDF](http://arxiv.org/pdf/2212.06135v1){: .btn .btn-green } |
+
+**Abstract**: This paper presents a 3D generative model that uses diffusion models to
+automatically generate 3D digital avatars represented as neural radiance
+fields. A significant challenge in generating such avatars is that the memory
+and processing costs in 3D are prohibitive for producing the rich details
+required for high-quality avatars. To tackle this problem we propose the
+roll-out diffusion network (Rodin), which represents a neural radiance field as
+multiple 2D feature maps and rolls out these maps into a single 2D feature
+plane within which we perform 3D-aware diffusion. The Rodin model brings the
+much-needed computational efficiency while preserving the integrity of
+diffusion in 3D by using 3D-aware convolution that attends to projected
+features in the 2D feature plane according to their original relationship in
+3D. We also use latent conditioning to orchestrate the feature generation for
+global coherence, leading to high-fidelity avatars and enabling their semantic
+editing based on text prompts. Finally, we use hierarchical synthesis to
+further enhance details. The 3D avatars generated by our model compare
+favorably with those produced by existing generative techniques. We can
+generate highly detailed avatars with realistic hairstyles and facial hair like
+beards. We also demonstrate 3D avatar generation from image or text as well as
+text-guided editability.
+
+Comments:
+- Project Webpage: https://3d-avatar-diffusion.microsoft.com/
+
+---
+
+## 4K-NeRF: High Fidelity Neural Radiance Fields at Ultra High Resolutions
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-09 | Zhongshu Wang, Lingzhi Li, Zhen Shen, Li Shen, Liefeng Bo | cs.CV | [PDF](http://arxiv.org/pdf/2212.04701v2){: .btn .btn-green } |
+
+**Abstract**: In this paper, we present a novel and effective framework, named 4K-NeRF, to
+pursue high fidelity view synthesis on the challenging scenarios of ultra high
+resolutions, building on the methodology of neural radiance fields (NeRF). The
+rendering procedure of NeRF-based methods typically relies on a pixel-wise
+manner in which rays (or pixels) are treated independently on both training and
+inference phases, limiting its representational ability on describing subtle
+details, especially when lifting to a extremely high resolution. We address the
+issue by exploring ray correlation to enhance high-frequency details recovery.
+Particularly, we use the 3D-aware encoder to model geometric information
+effectively in a lower resolution space and recover fine details through the
+3D-aware decoder, conditioned on ray features and depths estimated by the
+encoder. Joint training with patch-based sampling further facilitates our
+method incorporating the supervision from perception oriented regularization
+beyond pixel-wise loss. Benefiting from the use of geometry-aware local
+context, our method can significantly boost rendering quality on high-frequency
+details compared with modern NeRF methods, and achieve the state-of-the-art
+visual quality on 4K ultra-high-resolution scenarios. Code Available at
+\url{https://github.com/frozoul/4K-NeRF}
+
+---
+
+## Few-View Object Reconstruction with Unknown Categories and Camera Poses
+
+
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-08 | Hanwen Jiang, Zhenyu Jiang, Kristen Grauman, Yuke Zhu | cs.CV | [PDF](http://arxiv.org/pdf/2212.04492v2){: .btn .btn-green } |
+
+**Abstract**: While object reconstruction has made great strides in recent years, current
+methods typically require densely captured images and/or known camera poses,
+and generalize poorly to novel object categories. To step toward object
+reconstruction in the wild, this work explores reconstructing general
+real-world objects from a few images without known camera poses or object
+categories. The crux of our work is solving two fundamental 3D vision problems
+-- shape reconstruction and pose estimation -- in a unified approach. Our
+approach captures the synergies of these two problems: reliable camera pose
+estimation gives rise to accurate shape reconstruction, and the accurate
+reconstruction, in turn, induces robust correspondence between different views
+and facilitates pose estimation. Our method FORGE predicts 3D features from
+each view and leverages them in conjunction with the input images to establish
+cross-view correspondence for estimating relative camera poses. The 3D features
+are then transformed by the estimated poses into a shared space and are fused
+into a neural radiance field. The reconstruction results are rendered by volume
+rendering techniques, enabling us to train the model without 3D shape
+ground-truth. Our experiments show that FORGE reliably reconstructs objects
+from five views. Our pose estimation method outperforms existing ones by a
+large margin. The reconstruction results under predicted poses are comparable
+to the ones using ground-truth poses. The performance on novel testing
+categories matches the results on categories seen during training. Project
+page: https://ut-austin-rpl.github.io/FORGE/
+
+---
+
+## GazeNeRF: 3D-Aware Gaze Redirection with Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-08 | Alessandro Ruzzi, Xiangwei Shi, Xi Wang, Gengyan Li, Shalini De Mello, Hyung Jin Chang, Xucong Zhang, Otmar Hilliges | cs.CV | [PDF](http://arxiv.org/pdf/2212.04823v2){: .btn .btn-green } |
+
+**Abstract**: We propose GazeNeRF, a 3D-aware method for the task of gaze redirection.
+Existing gaze redirection methods operate on 2D images and struggle to generate
+3D consistent results. Instead, we build on the intuition that the face region
+and eyeballs are separate 3D structures that move in a coordinated yet
+independent fashion. Our method leverages recent advancements in conditional
+image-based neural radiance fields and proposes a two-stream architecture that
+predicts volumetric features for the face and eye regions separately. Rigidly
+transforming the eye features via a 3D rotation matrix provides fine-grained
+control over the desired gaze angle. The final, redirected image is then
+attained via differentiable volume compositing. Our experiments show that this
+architecture outperforms naively conditioned NeRF baselines as well as previous
+state-of-the-art 2D gaze redirection methods in terms of redirection accuracy
+and identity preservation.
+
+Comments:
+- Accepted at CVPR 2023. Github page:
+  https://github.com/AlessandroRuzzi/GazeNeRF
+
+---
+
+## NeRFEditor: Differentiable Style Decomposition for Full 3D Scene Editing
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-07 | Chunyi Sun, Yanbin Liu, Junlin Han, Stephen Gould | cs.CV | [PDF](http://arxiv.org/pdf/2212.03848v2){: .btn .btn-green } |
+
+**Abstract**: We present NeRFEditor, an efficient learning framework for 3D scene editing,
+which takes a video captured over 360{\deg} as input and outputs a
+high-quality, identity-preserving stylized 3D scene. Our method supports
+diverse types of editing such as guided by reference images, text prompts, and
+user interactions. We achieve this by encouraging a pre-trained StyleGAN model
+and a NeRF model to learn from each other mutually. Specifically, we use a NeRF
+model to generate numerous image-angle pairs to train an adjustor, which can
+adjust the StyleGAN latent code to generate high-fidelity stylized images for
+any given angle. To extrapolate editing to GAN out-of-domain views, we devise
+another module that is trained in a self-supervised learning manner. This
+module maps novel-view images to the hidden space of StyleGAN that allows
+StyleGAN to generate stylized images on novel views. These two modules together
+produce guided images in 360{\deg}views to finetune a NeRF to make stylization
+effects, where a stable fine-tuning strategy is proposed to achieve this.
+Experiments show that NeRFEditor outperforms prior work on benchmark and
+real-world scenes with better editability, fidelity, and identity preservation.
+
+Comments:
+- Project page: https://chuny1.github.io/NeRFEditor/nerfeditor.html
+
+---
+
+## Non-uniform Sampling Strategies for NeRF on 360{\textdegree} images
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-07 | Takashi Otonari, Satoshi Ikehata, Kiyoharu Aizawa | cs.CV | [PDF](http://arxiv.org/pdf/2212.03635v1){: .btn .btn-green } |
+
+**Abstract**: In recent years, the performance of novel view synthesis using perspective
+images has dramatically improved with the advent of neural radiance fields
+(NeRF). This study proposes two novel techniques that effectively build NeRF
+for 360{\textdegree} omnidirectional images. Due to the characteristics of a
+360{\textdegree} image of ERP format that has spatial distortion in their high
+latitude regions and a 360{\textdegree} wide viewing angle, NeRF's general ray
+sampling strategy is ineffective. Hence, the view synthesis accuracy of NeRF is
+limited and learning is not efficient. We propose two non-uniform ray sampling
+schemes for NeRF to suit 360{\textdegree} images - distortion-aware ray
+sampling and content-aware ray sampling. We created an evaluation dataset
+Synth360 using Replica and SceneCity models of indoor and outdoor scenes,
+respectively. In experiments, we show that our proposal successfully builds
+360{\textdegree} image NeRF in terms of both accuracy and efficiency. The
+proposal is widely applicable to advanced variants of NeRF. DietNeRF, AugNeRF,
+and NeRF++ combined with the proposed techniques further improve the
+performance. Moreover, we show that our proposed method enhances the quality of
+real-world scenes in 360{\textdegree} images. Synth360:
+https://drive.google.com/drive/folders/1suL9B7DO2no21ggiIHkH3JF3OecasQLb.
+
+Comments:
+- Accepted at the 33rd British Machine Vision Conference (BMVC) 2022
+
+---
+
+## EditableNeRF: Editing Topologically Varying Neural Radiance Fields by  Key Points
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-07 | Chengwei Zheng, Wenbin Lin, Feng Xu | cs.CV | [PDF](http://arxiv.org/pdf/2212.04247v2){: .btn .btn-green } |
+
+**Abstract**: Neural radiance fields (NeRF) achieve highly photo-realistic novel-view
+synthesis, but it's a challenging problem to edit the scenes modeled by
+NeRF-based methods, especially for dynamic scenes. We propose editable neural
+radiance fields that enable end-users to easily edit dynamic scenes and even
+support topological changes. Input with an image sequence from a single camera,
+our network is trained fully automatically and models topologically varying
+dynamics using our picked-out surface key points. Then end-users can edit the
+scene by easily dragging the key points to desired new positions. To achieve
+this, we propose a scene analysis method to detect and initialize key points by
+considering the dynamics in the scene, and a weighted key points strategy to
+model topologically varying dynamics by joint key points and weights
+optimization. Our method supports intuitive multi-dimensional (up to 3D)
+editing and can generate novel scenes that are unseen in the input sequence.
+Experiments demonstrate that our method achieves high-quality editing on
+various dynamic scenes and outperforms the state-of-the-art. Our code and
+captured data are available at https://chengwei-zheng.github.io/EditableNeRF/.
+
+Comments:
+- Accepted by CVPR 2023
+
+---
+
+## SSDNeRF: Semantic Soft Decomposition of Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-07 | Siddhant Ranade, Christoph Lassner, Kai Li, Christian Haene, Shen-Chi Chen, Jean-Charles Bazin, Sofien Bouaziz | cs.CV | [PDF](http://arxiv.org/pdf/2212.03406v1){: .btn .btn-green } |
+
+**Abstract**: Neural Radiance Fields (NeRFs) encode the radiance in a scene parameterized
+by the scene's plenoptic function. This is achieved by using an MLP together
+with a mapping to a higher-dimensional space, and has been proven to capture
+scenes with a great level of detail. Naturally, the same parameterization can
+be used to encode additional properties of the scene, beyond just its radiance.
+A particularly interesting property in this regard is the semantic
+decomposition of the scene. We introduce a novel technique for semantic soft
+decomposition of neural radiance fields (named SSDNeRF) which jointly encodes
+semantic signals in combination with radiance signals of a scene. Our approach
+provides a soft decomposition of the scene into semantic parts, enabling us to
+correctly encode multiple semantic classes blending along the same direction --
+an impossible feat for existing methods. Not only does this lead to a detailed,
+3D semantic representation of the scene, but we also show that the regularizing
+effects of the MLP used for encoding help to improve the semantic
+representation. We show state-of-the-art segmentation and reconstruction
+results on a dataset of common objects and demonstrate how the proposed
+approach can be applied for high quality temporally consistent video editing
+and re-compositing on a dataset of casually captured selfie videos.
+
+Comments:
+- Project page:
+  https://www.siddhantranade.com/research/2022/12/06/SSDNeRF-Semantic-Soft-Decomposition-of-Neural-Radiance-Fields.html
+
+---
+
+## NeRDi: Single-View NeRF Synthesis with Language-Guided Diffusion as  General Image Priors
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-06 | Congyue Deng, Chiyu "Max'' Jiang, Charles R. Qi, Xinchen Yan, Yin Zhou, Leonidas Guibas, Dragomir Anguelov | cs.CV | [PDF](http://arxiv.org/pdf/2212.03267v1){: .btn .btn-green } |
+
+**Abstract**: 2D-to-3D reconstruction is an ill-posed problem, yet humans are good at
+solving this problem due to their prior knowledge of the 3D world developed
+over years. Driven by this observation, we propose NeRDi, a single-view NeRF
+synthesis framework with general image priors from 2D diffusion models.
+Formulating single-view reconstruction as an image-conditioned 3D generation
+problem, we optimize the NeRF representations by minimizing a diffusion loss on
+its arbitrary view renderings with a pretrained image diffusion model under the
+input-view constraint. We leverage off-the-shelf vision-language models and
+introduce a two-section language guidance as conditioning inputs to the
+diffusion model. This is essentially helpful for improving multiview content
+coherence as it narrows down the general image prior conditioned on the
+semantic and visual features of the single-view input image. Additionally, we
+introduce a geometric loss based on estimated depth maps to regularize the
+underlying 3D geometry of the NeRF. Experimental results on the DTU MVS dataset
+show that our method can synthesize novel views with higher quality even
+compared to existing methods trained on this dataset. We also demonstrate our
+generalizability in zero-shot NeRF synthesis for in-the-wild images.
+
+---
+
+## SceneRF: Self-Supervised Monocular 3D Scene Reconstruction with Radiance  Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-05 | Anh-Quan Cao, Raoul de Charette | cs.CV | [PDF](http://arxiv.org/pdf/2212.02501v4){: .btn .btn-green } |
+
+**Abstract**: 3D reconstruction from a single 2D image was extensively covered in the
+literature but relies on depth supervision at training time, which limits its
+applicability. To relax the dependence to depth we propose SceneRF, a
+self-supervised monocular scene reconstruction method using only posed image
+sequences for training. Fueled by the recent progress in neural radiance fields
+(NeRF) we optimize a radiance field though with explicit depth optimization and
+a novel probabilistic sampling strategy to efficiently handle large scenes. At
+inference, a single input image suffices to hallucinate novel depth views which
+are fused together to obtain 3D scene reconstruction. Thorough experiments
+demonstrate that we outperform all baselines for novel depth views synthesis
+and scene reconstruction, on indoor BundleFusion and outdoor SemanticKITTI.
+Code is available at https://astra-vision.github.io/SceneRF .
+
+Comments:
+- ICCV 2023. Project page: https://astra-vision.github.io/SceneRF
+
+---
+
+## Canonical Fields: Self-Supervised Learning of Pose-Canonicalized Neural  Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-05 | Rohith Agaram, Shaurya Dewan, Rahul Sajnani, Adrien Poulenard, Madhava Krishna, Srinath Sridhar | cs.CV | [PDF](http://arxiv.org/pdf/2212.02493v3){: .btn .btn-green } |
+
+**Abstract**: Coordinate-based implicit neural networks, or neural fields, have emerged as
+useful representations of shape and appearance in 3D computer vision. Despite
+advances, however, it remains challenging to build neural fields for categories
+of objects without datasets like ShapeNet that provide "canonicalized" object
+instances that are consistently aligned for their 3D position and orientation
+(pose). We present Canonical Field Network (CaFi-Net), a self-supervised method
+to canonicalize the 3D pose of instances from an object category represented as
+neural fields, specifically neural radiance fields (NeRFs). CaFi-Net directly
+learns from continuous and noisy radiance fields using a Siamese network
+architecture that is designed to extract equivariant field features for
+category-level canonicalization. During inference, our method takes pre-trained
+neural radiance fields of novel object instances at arbitrary 3D pose and
+estimates a canonical field with consistent 3D pose across the entire category.
+Extensive experiments on a new dataset of 1300 NeRF models across 13 object
+categories show that our method matches or exceeds the performance of 3D point
+cloud-based methods.
+
+---
+
+## One-shot Implicit Animatable Avatars with Model-based Priors
+
+
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-05 | Yangyi Huang, Hongwei Yi, Weiyang Liu, Haofan Wang, Boxi Wu, Wenxiao Wang, Binbin Lin, Debing Zhang, Deng Cai | cs.CV | [PDF](http://arxiv.org/pdf/2212.02469v4){: .btn .btn-green } |
+
+**Abstract**: Existing neural rendering methods for creating human avatars typically either
+require dense input signals such as video or multi-view images, or leverage a
+learned prior from large-scale specific 3D human datasets such that
+reconstruction can be performed with sparse-view inputs. Most of these methods
+fail to achieve realistic reconstruction when only a single image is available.
+To enable the data-efficient creation of realistic animatable 3D humans, we
+propose ELICIT, a novel method for learning human-specific neural radiance
+fields from a single image. Inspired by the fact that humans can effortlessly
+estimate the body geometry and imagine full-body clothing from a single image,
+we leverage two priors in ELICIT: 3D geometry prior and visual semantic prior.
+Specifically, ELICIT utilizes the 3D body shape geometry prior from a skinned
+vertex-based template model (i.e., SMPL) and implements the visual clothing
+semantic prior with the CLIP-based pretrained models. Both priors are used to
+jointly guide the optimization for creating plausible content in the invisible
+areas. Taking advantage of the CLIP models, ELICIT can use text descriptions to
+generate text-conditioned unseen regions. In order to further improve visual
+details, we propose a segmentation-based sampling strategy that locally refines
+different parts of the avatar. Comprehensive evaluations on multiple popular
+benchmarks, including ZJU-MoCAP, Human3.6M, and DeepFashion, show that ELICIT
+has outperformed strong baseline methods of avatar creation when only a single
+image is available. The code is public for research purposes at
+https://huangyangyi.github.io/ELICIT/.
+
+Comments:
+- To appear at ICCV 2023. Project website:
+  https://huangyangyi.github.io/ELICIT/
+
+---
+
+## D-TensoRF: Tensorial Radiance Fields for Dynamic Scenes
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-05 | Hankyu Jang, Daeyoung Kim | cs.CV | [PDF](http://arxiv.org/pdf/2212.02375v2){: .btn .btn-green } |
+
+**Abstract**: Neural radiance field (NeRF) attracts attention as a promising approach to
+reconstructing the 3D scene. As NeRF emerges, subsequent studies have been
+conducted to model dynamic scenes, which include motions or topological
+changes. However, most of them use an additional deformation network, slowing
+down the training and rendering speed. Tensorial radiance field (TensoRF)
+recently shows its potential for fast, high-quality reconstruction of static
+scenes with compact model size. In this paper, we present D-TensoRF, a
+tensorial radiance field for dynamic scenes, enabling novel view synthesis at a
+specific time. We consider the radiance field of a dynamic scene as a 5D
+tensor. The 5D tensor represents a 4D grid in which each axis corresponds to X,
+Y, Z, and time and has 1D multi-channel features per element. Similar to
+TensoRF, we decompose the grid either into rank-one vector components (CP
+decomposition) or low-rank matrix components (newly proposed MM decomposition).
+We also use smoothing regularization to reflect the relationship between
+features at different times (temporal dependency). We conduct extensive
+evaluations to analyze our models. We show that D-TensoRF with CP decomposition
+and MM decomposition both have short training times and significantly low
+memory footprints with quantitatively and qualitatively competitive rendering
+results in comparison to the state-of-the-art methods in 3D dynamic scene
+modeling.
+
+Comments:
+- 21 pages, 11 figures
+
+---
+
+## GARF:Geometry-Aware Generalized Neural Radiance Field
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-05 | Yue Shi, Dingyi Rong, Bingbing Ni, Chang Chen, Wenjun Zhang | cs.CV | [PDF](http://arxiv.org/pdf/2212.02280v2){: .btn .btn-green } |
+
+**Abstract**: Neural Radiance Field (NeRF) has revolutionized free viewpoint rendering
+tasks and achieved impressive results. However, the efficiency and accuracy
+problems hinder its wide applications. To address these issues, we propose
+Geometry-Aware Generalized Neural Radiance Field (GARF) with a geometry-aware
+dynamic sampling (GADS) strategy to perform real-time novel view rendering and
+unsupervised depth estimation on unseen scenes without per-scene optimization.
+Distinct from most existing generalized NeRFs, our framework infers the unseen
+scenes on both pixel-scale and geometry-scale with only a few input images.
+More specifically, our method learns common attributes of novel-view synthesis
+by an encoder-decoder structure and a point-level learnable multi-view feature
+fusion module which helps avoid occlusion. To preserve scene characteristics in
+the generalized model, we introduce an unsupervised depth estimation module to
+derive the coarse geometry, narrow down the ray sampling interval to proximity
+space of the estimated surface and sample in expectation maximum position,
+constituting Geometry-Aware Dynamic Sampling strategy (GADS). Moreover, we
+introduce a Multi-level Semantic Consistency loss (MSC) to assist more
+informative representation learning. Extensive experiments on indoor and
+outdoor datasets show that comparing with state-of-the-art generalized NeRF
+methods, GARF reduces samples by more than 25\%, while improving rendering
+quality and 3D geometry estimation.
+
+---
+
+## INGeo: Accelerating Instant Neural Scene Reconstruction with Noisy  Geometry Priors
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-05 | Chaojian Li, Bichen Wu, Albert Pumarola, Peizhao Zhang, Yingyan Lin, Peter Vajda | cs.CV | [PDF](http://arxiv.org/pdf/2212.01959v1){: .btn .btn-green } |
+
+**Abstract**: We present a method that accelerates reconstruction of 3D scenes and objects,
+aiming to enable instant reconstruction on edge devices such as mobile phones
+and AR/VR headsets. While recent works have accelerated scene reconstruction
+training to minute/second-level on high-end GPUs, there is still a large gap to
+the goal of instant training on edge devices which is yet highly desired in
+many emerging applications such as immersive AR/VR. To this end, this work aims
+to further accelerate training by leveraging geometry priors of the target
+scene. Our method proposes strategies to alleviate the noise of the imperfect
+geometry priors to accelerate the training speed on top of the highly optimized
+Instant-NGP. On the NeRF Synthetic dataset, our work uses half of the training
+iterations to reach an average test PSNR of >30.
+
+Comments:
+- Accepted by Computer Vision for Metaverse Workshop @ ECCV'22
+
+---
+
+## Neural Fourier Filter Bank
+
+
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-04 | Zhijie Wu, Yuhe Jin, Kwang Moo Yi | cs.CV | [PDF](http://arxiv.org/pdf/2212.01735v4){: .btn .btn-green } |
+
+**Abstract**: We present a novel method to provide efficient and highly detailed
+reconstructions. Inspired by wavelets, we learn a neural field that decompose
+the signal both spatially and frequency-wise. We follow the recent grid-based
+paradigm for spatial decomposition, but unlike existing work, encourage
+specific frequencies to be stored in each grid via Fourier features encodings.
+We then apply a multi-layer perceptron with sine activations, taking these
+Fourier encoded features in at appropriate layers so that higher-frequency
+components are accumulated on top of lower-frequency components sequentially,
+which we sum up to form the final output. We demonstrate that our method
+outperforms the state of the art regarding model compactness and convergence
+speed on multiple tasks: 2D image fitting, 3D shape reconstruction, and neural
+radiance fields. Our code is available at https://github.com/ubc-vision/NFFB.
+
+---
+
+## MaRF: Representing Mars as Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-03 | Lorenzo Giusti, Josue Garcia, Steven Cozine, Darrick Suen, Christina Nguyen, Ryan Alimo | cs.CV | [PDF](http://arxiv.org/pdf/2212.01672v1){: .btn .btn-green } |
+
+**Abstract**: The aim of this work is to introduce MaRF, a novel framework able to
+synthesize the Martian environment using several collections of images from
+rover cameras. The idea is to generate a 3D scene of Mars' surface to address
+key challenges in planetary surface exploration such as: planetary geology,
+simulated navigation and shape analysis. Although there exist different methods
+to enable a 3D reconstruction of Mars' surface, they rely on classical computer
+graphics techniques that incur high amounts of computational resources during
+the reconstruction process, and have limitations with generalizing
+reconstructions to unseen scenes and adapting to new images coming from rover
+cameras. The proposed framework solves the aforementioned limitations by
+exploiting Neural Radiance Fields (NeRFs), a method that synthesize complex
+scenes by optimizing a continuous volumetric scene function using a sparse set
+of images. To speed up the learning process, we replaced the sparse set of
+rover images with their neural graphics primitives (NGPs), a set of vectors of
+fixed length that are learned to preserve the information of the original
+images in a significantly smaller size. In the experimental section, we
+demonstrate the environments created from actual Mars datasets captured by
+Curiosity rover, Perseverance rover and Ingenuity helicopter, all of which are
+available on the Planetary Data System (PDS).
+
+Comments:
+- ECCV 2022 (oral)
+
+---
+
+## StegaNeRF: Embedding Invisible Information within Neural Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-03 | Chenxin Li, Brandon Y. Feng, Zhiwen Fan, Panwang Pan, Zhangyang Wang | cs.CV | [PDF](http://arxiv.org/pdf/2212.01602v1){: .btn .btn-green } |
+
+**Abstract**: Recent advances in neural rendering imply a future of widespread visual data
+distributions through sharing NeRF model weights. However, while common visual
+data (images and videos) have standard approaches to embed ownership or
+copyright information explicitly or subtly, the problem remains unexplored for
+the emerging NeRF format. We present StegaNeRF, a method for steganographic
+information embedding in NeRF renderings. We design an optimization framework
+allowing accurate hidden information extractions from images rendered by NeRF,
+while preserving its original visual quality. We perform experimental
+evaluations of our method under several potential deployment scenarios, and we
+further discuss the insights discovered through our analysis. StegaNeRF
+signifies an initial exploration into the novel problem of instilling
+customizable, imperceptible, and recoverable information to NeRF renderings,
+with minimal impact to rendered images. Project page:
+https://xggnet.github.io/StegaNeRF/.
+
+Comments:
+- Project page: https://xggnet.github.io/StegaNeRF/
+
+---
+
+## Fast Non-Rigid Radiance Fields from Monocularized Data
+
+
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-02 | Moritz Kappel, Vladislav Golyanik, Susana Castillo, Christian Theobalt, Marcus Magnor | cs.CV | [PDF](http://arxiv.org/pdf/2212.01368v2){: .btn .btn-green } |
+
+**Abstract**: The reconstruction and novel view synthesis of dynamic scenes recently gained
+increased attention. As reconstruction from large-scale multi-view data
+involves immense memory and computational requirements, recent benchmark
+datasets provide collections of single monocular views per timestamp sampled
+from multiple (virtual) cameras. We refer to this form of inputs as
+"monocularized" data. Existing work shows impressive results for synthetic
+setups and forward-facing real-world data, but is often limited in the training
+speed and angular range for generating novel views. This paper addresses these
+limitations and proposes a new method for full 360{\deg} inward-facing novel
+view synthesis of non-rigidly deforming scenes. At the core of our method are:
+1) An efficient deformation module that decouples the processing of spatial and
+temporal information for accelerated training and inference; and 2) A static
+module representing the canonical scene as a fast hash-encoded neural radiance
+field. In addition to existing synthetic monocularized data, we systematically
+analyze the performance on real-world inward-facing scenes using a newly
+recorded challenging dataset sampled from a synchronized large-scale multi-view
+rig. In both cases, our method is significantly faster than previous methods,
+converging in less than 7 minutes and achieving real-time framerates at 1K
+resolution, while obtaining a higher visual accuracy for generated novel views.
+Our source code and data is available at our project page
+https://graphics.tu-bs.de/publications/kappel2022fast.
+
+Comments:
+- 18 pages, 14 figures; project page:
+  https://graphics.tu-bs.de/publications/kappel2022fast
+
+---
+
+## Surface Normal Clustering for Implicit Representation of Manhattan  Scenes
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-02 | Nikola Popovic, Danda Pani Paudel, Luc Van Gool | cs.CV | [PDF](http://arxiv.org/pdf/2212.01331v4){: .btn .btn-green } |
+
+**Abstract**: Novel view synthesis and 3D modeling using implicit neural field
+representation are shown to be very effective for calibrated multi-view
+cameras. Such representations are known to benefit from additional geometric
+and semantic supervision. Most existing methods that exploit additional
+supervision require dense pixel-wise labels or localized scene priors. These
+methods cannot benefit from high-level vague scene priors provided in terms of
+scenes' descriptions. In this work, we aim to leverage the geometric prior of
+Manhattan scenes to improve the implicit neural radiance field representations.
+More precisely, we assume that only the knowledge of the indoor scene (under
+investigation) being Manhattan is known -- with no additional information
+whatsoever -- with an unknown Manhattan coordinate frame. Such high-level prior
+is used to self-supervise the surface normals derived explicitly in the
+implicit neural fields. Our modeling allows us to cluster the derived normals
+and exploit their orthogonality constraints for self-supervision. Our
+exhaustive experiments on datasets of diverse indoor scenes demonstrate the
+significant benefit of the proposed method over the established baselines. The
+source code is available at
+https://github.com/nikola3794/normal-clustering-nerf.
+
+Comments:
+- Paper accepted to ICCV23
+
+---
+
+## RT-NeRF: Real-Time On-Device Neural Radiance Fields Towards Immersive  AR/VR Rendering
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-02 | Chaojian Li, Sixu Li, Yang Zhao, Wenbo Zhu, Yingyan Lin | cs.AR | [PDF](http://arxiv.org/pdf/2212.01120v1){: .btn .btn-green } |
+
+**Abstract**: Neural Radiance Field (NeRF) based rendering has attracted growing attention
+thanks to its state-of-the-art (SOTA) rendering quality and wide applications
+in Augmented and Virtual Reality (AR/VR). However, immersive real-time (> 30
+FPS) NeRF based rendering enabled interactions are still limited due to the low
+achievable throughput on AR/VR devices. To this end, we first profile SOTA
+efficient NeRF algorithms on commercial devices and identify two primary causes
+of the aforementioned inefficiency: (1) the uniform point sampling and (2) the
+dense accesses and computations of the required embeddings in NeRF.
+Furthermore, we propose RT-NeRF, which to the best of our knowledge is the
+first algorithm-hardware co-design acceleration of NeRF. Specifically, on the
+algorithm level, RT-NeRF integrates an efficient rendering pipeline for largely
+alleviating the inefficiency due to the commonly adopted uniform point sampling
+method in NeRF by directly computing the geometry of pre-existing points.
+Additionally, RT-NeRF leverages a coarse-grained view-dependent computing
+ordering scheme for eliminating the (unnecessary) processing of invisible
+points. On the hardware level, our proposed RT-NeRF accelerator (1) adopts a
+hybrid encoding scheme to adaptively switch between a bitmap- or
+coordinate-based sparsity encoding format for NeRF's sparse embeddings, aiming
+to maximize the storage savings and thus reduce the required DRAM accesses
+while supporting efficient NeRF decoding; and (2) integrates both a
+dual-purpose bi-direction adder & search tree and a high-density sparse search
+unit to coordinate the two aforementioned encoding formats. Extensive
+experiments on eight datasets consistently validate the effectiveness of
+RT-NeRF, achieving a large throughput improvement (e.g., 9.7x - 3,201x) while
+maintaining the rendering quality as compared with SOTA efficient NeRF
+solutions.
+
+Comments:
+- Accepted to ICCAD 2022
+
+---
+
+## 3D-TOGO: Towards Text-Guided Cross-Category 3D Object Generation
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-02 | Zutao Jiang, Guansong Lu, Xiaodan Liang, Jihua Zhu, Wei Zhang, Xiaojun Chang, Hang Xu | cs.CV | [PDF](http://arxiv.org/pdf/2212.01103v2){: .btn .btn-green } |
+
+**Abstract**: Text-guided 3D object generation aims to generate 3D objects described by
+user-defined captions, which paves a flexible way to visualize what we
+imagined. Although some works have been devoted to solving this challenging
+task, these works either utilize some explicit 3D representations (e.g., mesh),
+which lack texture and require post-processing for rendering photo-realistic
+views; or require individual time-consuming optimization for every single case.
+Here, we make the first attempt to achieve generic text-guided cross-category
+3D object generation via a new 3D-TOGO model, which integrates a text-to-views
+generation module and a views-to-3D generation module. The text-to-views
+generation module is designed to generate different views of the target 3D
+object given an input caption. prior-guidance, caption-guidance and view
+contrastive learning are proposed for achieving better view-consistency and
+caption similarity. Meanwhile, a pixelNeRF model is adopted for the views-to-3D
+generation module to obtain the implicit 3D neural representation from the
+previously-generated views. Our 3D-TOGO model generates 3D objects in the form
+of the neural radiance field with good texture and requires no time-cost
+optimization for every single caption. Besides, 3D-TOGO can control the
+category, color and shape of generated 3D objects with the input caption.
+Extensive experiments on the largest 3D object dataset (i.e., ABO) are
+conducted to verify that 3D-TOGO can better generate high-quality 3D objects
+according to the input captions across 98 different categories, in terms of
+PSNR, SSIM, LPIPS and CLIP-score, compared with text-NeRF and Dreamfields.
+
+---
+
+## QFF: Quantized Fourier Features for Neural Field Representations
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-02 | Jae Yong Lee, Yuqun Wu, Chuhang Zou, Shenlong Wang, Derek Hoiem | cs.CV | [PDF](http://arxiv.org/pdf/2212.00914v1){: .btn .btn-green } |
+
+**Abstract**: Multilayer perceptrons (MLPs) learn high frequencies slowly. Recent
+approaches encode features in spatial bins to improve speed of learning
+details, but at the cost of larger model size and loss of continuity. Instead,
+we propose to encode features in bins of Fourier features that are commonly
+used for positional encoding. We call these Quantized Fourier Features (QFF).
+As a naturally multiresolution and periodic representation, our experiments
+show that using QFF can result in smaller model size, faster training, and
+better quality outputs for several applications, including Neural Image
+Representations (NIR), Neural Radiance Field (NeRF) and Signed Distance
+Function (SDF) modeling. QFF are easy to code, fast to compute, and serve as a
+simple drop-in addition to many neural field representations.
+
+---
+
+## Mixed Neural Voxels for Fast Multi-view Video Synthesis
+
+
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-01 | Feng Wang, Sinan Tan, Xinghang Li, Zeyue Tian, Yafei Song, Huaping Liu | cs.CV | [PDF](http://arxiv.org/pdf/2212.00190v2){: .btn .btn-green } |
+
+**Abstract**: Synthesizing high-fidelity videos from real-world multi-view input is
+challenging because of the complexities of real-world environments and highly
+dynamic motions. Previous works based on neural radiance fields have
+demonstrated high-quality reconstructions of dynamic scenes. However, training
+such models on real-world scenes is time-consuming, usually taking days or
+weeks. In this paper, we present a novel method named MixVoxels to better
+represent the dynamic scenes with fast training speed and competitive rendering
+qualities. The proposed MixVoxels represents the 4D dynamic scenes as a mixture
+of static and dynamic voxels and processes them with different networks. In
+this way, the computation of the required modalities for static voxels can be
+processed by a lightweight model, which essentially reduces the amount of
+computation, especially for many daily dynamic scenes dominated by the static
+background. To separate the two kinds of voxels, we propose a novel variation
+field to estimate the temporal variance of each voxel. For the dynamic voxels,
+we design an inner-product time query method to efficiently query multiple time
+steps, which is essential to recover the high-dynamic motions. As a result,
+with 15 minutes of training for dynamic scenes with inputs of 300-frame videos,
+MixVoxels achieves better PSNR than previous methods. Codes and trained models
+are available at https://github.com/fengres/mixvoxels
+
+Comments:
+- ICCV 2023 (Oral)
+
+---
+
+## ViewNeRF: Unsupervised Viewpoint Estimation Using Category-Level Neural  Radiance Fields
+
+nerf
+{: .label .label-blue }
+
+| Published | Authors | Category | |
+|:---:|:---:|:---:|:---:|
+| 2022-12-01 | Octave Mariotti, Oisin Mac Aodha, Hakan Bilen | cs.CV | [PDF](http://arxiv.org/pdf/2212.00436v1){: .btn .btn-green } |
+
+**Abstract**: We introduce ViewNeRF, a Neural Radiance Field-based viewpoint estimation
+method that learns to predict category-level viewpoints directly from images
+during training. While NeRF is usually trained with ground-truth camera poses,
+multiple extensions have been proposed to reduce the need for this expensive
+supervision. Nonetheless, most of these methods still struggle in complex
+settings with large camera movements, and are restricted to single scenes, i.e.
+they cannot be trained on a collection of scenes depicting the same object
+category. To address these issues, our method uses an analysis by synthesis
+approach, combining a conditional NeRF with a viewpoint predictor and a scene
+encoder in order to produce self-supervised reconstructions for whole object
+categories. Rather than focusing on high fidelity reconstruction, we target
+efficient and accurate viewpoint prediction in complex scenarios, e.g.
+360{\deg} rotation on real data. Our model shows competitive results on
+synthetic and real datasets, both for single scenes and multi-instance
+collections.
