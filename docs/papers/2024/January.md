@@ -1,6 +1,6 @@
 ---
 layout: default
-title: January
+title: January 2024
 parent: 2024
 nav_order: 1
 ---
