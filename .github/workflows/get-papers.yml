@@ -1,6 +1,7 @@
 name: Get latest papers
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 10 * * *' # Runs daily at 10am UTC
 
