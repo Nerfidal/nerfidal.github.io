@@ -1,0 +1,34 @@
+name: Get latest papers
+
+on:
+  schedule:
+    - cron: '0 10 * * *' # Runs daily at 10am UTC
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.10
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+      
+    - name: Run Python script
+      run: |
+        python3 get_papers.py
+        
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "actions@users.noreply.github.com"
+        git add docs papers.csv
+        git commit -m "Update papers"
+        git push
