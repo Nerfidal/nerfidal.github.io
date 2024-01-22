@@ -21,6 +21,18 @@
   throwOnError: false,
 });"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.innerHTML = document.body.innerHTML.replace(/\$(.+?)\$/g, function(_, match){
+        try {
+            return katex.renderToString(match, { throwOnError: false });
+        } catch (e) {
+            return _;
+        }
+    });
+});
+</script>
+
 <!-- The KaTeX default is 1.21em, see https://katex.org/docs/font.html#font-size-and-lengths -->
 <style>
     .katex {
