@@ -168,4 +168,4 @@ class ArxivAgent:
 
 if __name__ == "__main__":
     agent = ArxivAgent("papers.csv")
-    agent.main(tags=["gaussian splatting", "nerf"], num_results=10, generate_pages=True)
+    agent.main(tags=["gaussian splatting", "nerf"], num_results=30, generate_pages=True)
