@@ -1,16 +1,4 @@
 id;link;pub_date;title;abstract;authors;pdf_link;category;comments;tags
-2401.12175v1;http://arxiv.org/abs/2401.12175v1;2024-01-22;Single-View 3D Human Digitalization with Large Reconstruction Models;"In this paper, we introduce Human-LRM, a single-stage feed-forward Large
-Reconstruction Model designed to predict human Neural Radiance Fields (NeRF)
-from a single image. Our approach demonstrates remarkable adaptability in
-training using extensive datasets containing 3D scans and multi-view capture.
-Furthermore, to enhance the model's applicability for in-the-wild scenarios
-especially with occlusions, we propose a novel strategy that distills
-multi-view reconstruction into single-view via a conditional triplane diffusion
-model. This generative extension addresses the inherent variations in human
-body shapes when observed from a single view, and makes it possible to
-reconstruct the full body human from an occluded image. Through extensive
-experiments, we show that Human-LRM surpasses previous methods by a significant
-margin on several benchmarks.";Zhenzhen Weng<author:sep>Jingyuan Liu<author:sep>Hao Tan<author:sep>Zhan Xu<author:sep>Yang Zhou<author:sep>Serena Yeung-Levy<author:sep>Jimei Yang;http://arxiv.org/pdf/2401.12175v1;cs.CV;;nerf
 2401.11985v1;http://arxiv.org/abs/2401.11985v1;2024-01-22;Scaling Face Interaction Graph Networks to Real World Scenes;"Accurately simulating real world object dynamics is essential for various
 applications such as robotics, engineering, graphics, and design. To better
 capture complex real dynamics such as contact and friction, learned simulators
