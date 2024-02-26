@@ -107,7 +107,7 @@ depth bins as well as the regression of the residual depth values, thereby
 benefiting the depth learning process. The resulting algorithm, NeRF-Det++, has
 exhibited appealing performance in the ScanNetV2 and ARKITScenes datasets.
 Notably, in ScanNetV2, NeRF-Det++ outperforms the competitive NeRF-Det by +1.9%
-in mAP@0.25 and +3.5% in mAP@0.50$. The code will be publicly at
+in mAP@0.25 and +3.5% in mAP@0.50. The code will be publicly at
 https://github.com/mrsempress/NeRF-Detplusplus.";Chenxi Huang<author:sep>Yuenan Hou<author:sep>Weicai Ye<author:sep>Di Huang<author:sep>Xiaoshui Huang<author:sep>Binbin Lin<author:sep>Deng Cai<author:sep>Wanli Ouyang;http://arxiv.org/pdf/2402.14464v1;cs.CV;7 pages, 2 figures;nerf
 2402.13827v1;http://arxiv.org/abs/2402.13827v1;2024-02-21;Identifying Unnecessary 3D Gaussians using Clustering for Fast Rendering  of 3D Gaussian Splatting;"3D Gaussian splatting (3D-GS) is a new rendering approach that outperforms
 the neural radiance field (NeRF) in terms of both speed and image quality.
